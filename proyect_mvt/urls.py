@@ -16,9 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from proyect_mvt.views import hola_mundo, vista_template
+from family_members.views import create_family_member, list_familiars
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("hola/", hola_mundo),
-    path("vista-template/", vista_template)
+    path("vista-template/", vista_template),
+
+    path("create-family-member/", create_family_member),
+    path("list-familiars/", list_familiars),
 ]
